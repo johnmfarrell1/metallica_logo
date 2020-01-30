@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://metallica.alwaysdata.net/creation/
+    body:
+      encoding: UTF-8
+      string: the_text=
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin18.6.0 x86_64) ruby/2.6.5p114
+      Content-Length:
+      - '9'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - metallica.alwaysdata.net
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 30 Jan 2020 14:52:02 GMT
+      Server:
+      - Apache/2.2
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - PHPSESSID=425fd10842bddfd8fed674efb53bf596; path=/
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '149'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Via:
+      - 1.1 alproxy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <br />
+        <b>Warning</b>:  imagecreate(): Invalid image dimensions in <b>/home/metallica/www/index.php</b> on line <b>101</b><br />
+        Cannot Initialize new GD image stream
+    http_version: 
+  recorded_at: Thu, 30 Jan 2020 14:52:02 GMT
+recorded_with: VCR 5.0.0

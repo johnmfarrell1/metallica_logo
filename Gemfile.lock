@@ -7,8 +7,13 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    hashdiff (1.0.0)
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -16,27 +21,36 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2019.1009)
     minitest (5.11.3)
+    minitest-spec-context (0.0.4)
     netrc (0.11.0)
+    public_suffix (4.0.3)
     rake (10.5.0)
     rest-client (2.1.0)
       http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    safe_yaml (1.0.5)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.6)
     vcr (5.0.0)
+    webmock (3.8.0)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.17)
+  bundler (~> 2.0)
   metallica_logo!
   minitest (~> 5.0)
+  minitest-spec-context (~> 0.0.3)
   rake (~> 10.0)
   vcr (~> 5.0)
+  webmock (~> 3.0)
 
 BUNDLED WITH
-   1.17.3
+   2.1.4

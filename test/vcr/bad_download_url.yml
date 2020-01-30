@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://metallica.alwaysdata.net/uploads/final/er.jpg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin18.6.0 x86_64) ruby/2.6.5p114
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - metallica.alwaysdata.net
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Date:
+      - Thu, 30 Jan 2020 16:10:00 GMT
+      Server:
+      - Apache/2.2
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - PHPSESSID=1d1da9f6eae6a83a2be31c5cff90f426; path=/
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '681'
+      Content-Type:
+      - text/html;charset=UTF-8
+      Via:
+      - 1.1 alproxy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <html><head><meta http-equiv='Content-Type' content='text/html; charset=utf-8'><title>Slim Application Error</title><style>body{margin:0;padding:30px;font:12px/1.5 Helvetica,Arial,Verdana,sans-serif;}h1{margin:0;font-size:48px;font-weight:normal;line-height:48px;}strong{display:inline-block;width:65px;}</style></head><body><h1>Slim Application Error</h1><p>The application could not run because of the following error:</p><h2>Details</h2><div><strong>Type:</strong> RuntimeException</div><div><strong>Message:</strong> Named route does not exist for name: 404page</div><div><strong>File:</strong> /home/metallica/www/vendor/slim/slim/Slim/Router.php</div><div><strong>Line:</strong> 258</div><h2>Trace</h2><pre>#0 /home/metallica/www/vendor/slim/slim/Slim/Router.php(342): Slim\Router-&gt;getNamedRoute('404page')
+        #1 /home/metallica/www/vendor/slim/slim/Slim/Router.php(406): Slim\Router-&gt;relativePathFor('404page', Array, Array)
+        #2 /home/metallica/www/config.php(182): Slim\Router-&gt;pathFor('404page', Array)
+        #3 /home/metallica/www/vendor/slim/slim/Slim/App.php(458): {closure}(Object(Slim\Http\Request), Object(Slim\Http\Response))
+        #4 /home/metallica/www/vendor/slim/slim/Slim/MiddlewareAwareTrait.php(116): Slim\App-&gt;__invoke(Object(Slim\Http\Request), Object(Slim\Http\Response))
+        #5 /home/metallica/www/vendor/slim/slim/Slim/App.php(337): Slim\App-&gt;callMiddlewareStack(Object(Slim\Http\Request), Object(Slim\Http\Response))
+        #6 /home/metallica/www/vendor/slim/slim/Slim/App.php(298): Slim\App-&gt;process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+        #7 /home/metallica/www/index.php(155): Slim\App-&gt;run()
+        #8 {main}</pre></body></html>
+    http_version: 
+  recorded_at: Thu, 30 Jan 2020 16:10:01 GMT
+recorded_with: VCR 5.0.0
