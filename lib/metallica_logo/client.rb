@@ -1,4 +1,8 @@
+# frozen_string_literal: true
+
 module MetallicaLogo
+  # HTTP client for requesting logo generation and also
+  # if desired, downloading to a local destination
   class Client
     attr_reader :rest_klass, :base_url
 
@@ -14,7 +18,7 @@ module MetallicaLogo
         raise RequestError, "Too many characters, limit is #{MAX_CHARACTERS}"
       end
 
-      response = post("#{@base_url}/creation/", { 'the_text': text })
+      response = post("#{@base_url}/creation/", 'the_text': text)
       MetallicaLogo::Result.new(JSON.parse(response))
     end
 
@@ -43,7 +47,9 @@ module MetallicaLogo
     end
 
     def validate_response(response)
-      raise ServerError, 'Invalid JSON returned' unless valid_json?(response.body)
+      unless valid_json?(response.body)
+        raise ServerError, 'Invalid JSON returned'
+      end
 
       case response.code.to_s
       when /2\d\d/ then response

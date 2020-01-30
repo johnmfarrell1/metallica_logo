@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'metallica_logo/version'
 require 'metallica_logo/result'
 require 'metallica_logo/client'
