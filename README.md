@@ -1,8 +1,8 @@
 # MetallicaLogo
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/metallica_logo`. To experiment with that code, run `bin/console` for an interactive prompt.
+![Metallica Logo](https://raw.githubusercontent.com/johnmfarrell1/metallica_logo/master/examples/metallica_logo_example_cropped.png)
 
-TODO: Delete this and the text above, and describe your gem
+Get any provided text as a Metallica image logo.
 
 ## Installation
 
