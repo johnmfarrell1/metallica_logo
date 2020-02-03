@@ -31,14 +31,14 @@ The client has 2 public methods depending on how you wish to use it.
 To fetch a logo result without downloading the image, use the following:
 
 ```ruby
-logo = client.generate_logo('some test to generate')
-#=> #<MetallicaLogo::Result:0x0000000000000000 @file="<url to image>", @token="token", @result="result">
+logo = client.generate_logo('some text to generate')
+#=> #<MetallicaLogo::Result:0x0000000000000000 @file="<url to image>", @token="<token>", @result="<result>">
 ```
 
 If you wish to also save the image locally, use the following:
 
 ```ruby
-logo = client.generate_and_download_logo('some test to generate', 'file.jpg')
+logo = client.generate_and_download_logo('some text to generate', 'file.jpg')
 #=> #<Pathname:file.jpg>
 ```
 
